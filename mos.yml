@@ -1,0 +1,22 @@
+author: Matthew Rinkachi Ciuła
+description: BH1750 driver
+version: 2.19.2
+
+filesystem:
+  - fs
+
+sources:
+  - src
+
+config_schema:
+  - ["i2c.enable", true]
+
+libs:
+  - origin: https://github.com/mongoose-os-libs/i2c
+
+tags:
+  - c
+  - js
+  - docs:drivers:bh1750 I2C
+
+manifest_version: 2017-09-29
