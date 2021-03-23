@@ -18,14 +18,14 @@ int32_t bh1750_init() {
 
   // power ups
   int8_t cmd = 0x01;
-  Bool ok = mgos_i2c_write(i2c, 0x23, & cmd, 1, true); // dh1750 default address is 0x23 (no register)
+  bool ok = mgos_i2c_write(i2c, 0x23, & cmd, 1, true); // dh1750 default address is 0x23 (no register)
   if (!ok) {
     return -2;
   }
 
   // Set continuous H resolution mode
   cmd = 0x10;
-  Ok = mgos_i2c_write(i2c, 0x23, & cmd, 1, true); // dh1750 default address is 0x23 (no register)
+  ok = mgos_i2c_write(i2c, 0x23, & cmd, 1, true); // dh1750 default address is 0x23 (no register)
   return ok ? 0 : -3;
 }
 
